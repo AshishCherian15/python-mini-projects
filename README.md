@@ -48,11 +48,12 @@ PIN-based login (3 attempts), check balance, deposit, withdraw, and exit flow wi
 - Python 3 (CLI)
 - HTML/CSS/JavaScript (website-style UI enhancement)
 
-![ATM Website Interface](ATM/ATM.jpg)
+![ATM Website Interface](ATM/ATM.jpeg)
 
 **Live Link:** [🔗 https://01-atm.vercel.app/](https://01-atm.vercel.app/)
 
 [📖 View ATM Project Details](ATM/14_Python_ATM_Simulation_README.md)
+[🖥️ View ATM CLI Preview](ATM/14_Python_ATM_Simulation_README.md#-cli-version-preview)
 
 ### 🛍️ Project 2: E-commerce Review Insights
 
@@ -74,11 +75,12 @@ Analyzes product reviews, classifies positive/negative/neutral sentiment, comput
 - Python 3 (CLI)
 - HTML/CSS/JavaScript (website-style UI enhancement)
 
-![Review Analytics Dashboard](Review/REVIEW.jpg)
+![Review Analytics Dashboard](Review/REVIEW.jpeg)
 
 **Live Link:** [🔗 https://02-review.vercel.app/](https://02-review.vercel.app/)
 
 [📖 View Review Project Details](Review/15_Ecommerce_Review_Insights_README.md)
+[🖥️ View Review CLI Preview](Review/15_Ecommerce_Review_Insights_README.md#-cli-version-preview)
 
 Both projects are now live on Vercel! Each deploys independently from the same repository using project-specific root directories.
 
