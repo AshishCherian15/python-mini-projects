@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce Review Insights - Website Style</title>
+  <style>
+    :root {
+      --bg: #060b17;
+      --card: #111827;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --blue: #38bdf8;
+      --violet: #8b5cf6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Segoe UI, system-ui, sans-serif;
+      background: radial-gradient(circle at 10% 0%, #1e293b 0%, #0b1020 38%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .wrap { max-width: 1060px; margin: 0 auto; }
+    .card {
+      background: rgba(15, 23, 42, .92);
+      border: 1px solid #243244;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .24);
+    }
+    h1 { margin: 0 0 8px; font-size: 1.55rem; color: #dbeafe; }
+    h3 { margin: 0 0 10px; color: #c7d2fe; }
+    p { margin: 0; color: var(--muted); }
+    button, textarea {
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: var(--text);
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+    button { cursor: pointer; transition: transform .08s ease, box-shadow .12s ease; }
+    button:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,.2); }
+    .primary {
+      background: linear-gradient(180deg, #0ea5e9, var(--blue));
+      border-color: #0ea5e9;
+      color: #082f49;
+      font-weight: 700;
+    }
+    .ghost { background: #1e293b; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .metric {
+      border: 1px solid #243244;
+      border-radius: 12px;
+      padding: 12px;
+      background: linear-gradient(180deg, #0b1220, #0a1020);
+    }
+    .metric .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 4px;
+    }
+    .metric .value {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .pos { color: var(--green); }
+    .neg { color: var(--red); }
+    .neu { color: var(--yellow); }
+    textarea { width: 100%; min-height: 96px; resize: vertical; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .tag {
+      display: inline-block;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin: 4px 6px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+      background: #0b1220;
+    }
+    .header-band {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #cbd5e1;
+      background: #0b1220;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--violet);
+      box-shadow: 0 0 10px var(--violet);
+      display: inline-block;
+    }
+    .results-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 860px) {
+      .results-layout { grid-template-columns: 1fr; }
+    }
+    .panel {
+      border: 1px solid #243244;
+      border-radius: 12px;
+      padding: 12px;
+      background: #0a1222;
+      min-height: 190px;
+    }
+    .classification {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background: #0b1220;
+      color: #cbd5e1;
+      font-weight: 600;
+      min-height: 44px;
+      display: grid;
+      align-items: center;
+    }
+    .footer-note { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card">
+      <div class="header-band">
+        <div>
+          <h1>E-commerce Review Insights (Website Style)</h1>
+          <p>Interactive sentiment dashboard built from your original Python CLI logic.</p>
+        </div>
+        <div class="pill"><span class="dot"></span> Portfolio Upgrade</div>
+      </div>
+      <div class="footer-note">Note: This website-style version is a self-improvement enhancement and was not part of LetsUpgrade assignment requirements.</div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <button id="analyzeBtn" class="primary">Run Analysis</button>
+        <button id="resetBtn" class="ghost">Reset to Default Reviews</button>
+      </div>
+      <div id="reviewList"></div>
+    </section>
+
+    <section class="card">
+      <h3>Counts & Percentages</h3>
+      <div id="metrics" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h3>Categorized Reviews</h3>
+      <div class="results-layout">
+        <div class="panel">
+          <strong class="pos">Positive</strong>
+          <ul id="positiveList"></ul>
+        </div>
+        <div class="panel">
+          <strong class="neg">Negative</strong>
+          <ul id="negativeList"></ul>
+        </div>
+        <div class="panel">
+          <strong class="neu">Neutral</strong>
+          <ul id="neutralList"></ul>
+        </div>
+        <div class="panel">
+          <strong>Insights</strong>
+          <div id="insights"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Add Your Own Review</h3>
+      <textarea id="userReview" placeholder="Type your review here..."></textarea>
+      <div class="row" style="margin-top:10px;">
+        <button id="classifyBtn" class="primary">Classify Review</button>
+      </div>
+      <div id="classificationResult" class="classification"></div>
+    </section>
+  </div>
+
+  <script>
+    const defaultReviews = [
+      'Great product, very useful and easy to use',
+      'The quality is good but delivery was late',
+      'Not satisfied, product stopped working after one week',
+      'Excellent quality and fast delivery',
+      'Average experience, nothing special'
+    ];
+
+    const positiveKeywords = ['good', 'great', 'excellent', 'useful', 'fast', 'easy', 'happy', 'best'];
+    const negativeKeywords = ['not', 'bad', 'late', 'stopped', 'worst', 'poor', 'unsatisfied', 'broken'];
+
+    const complaintKeywords = {
+      late: 'Late delivery',
+      stopped: 'Product stopped working',
+      bad: 'Bad quality',
+      not: 'Dissatisfied customers',
+      poor: 'Poor experience'
+    };
+
+    const likeKeywords = {
+      quality: 'Product quality',
+      delivery: 'Fast delivery',
+      useful: 'Usefulness of product',
+      easy: 'Ease of use',
+      great: 'Overall greatness',
+      excellent: 'Excellent experience'
+    };
+
+    let reviews = [...defaultReviews];
+
+    const reviewList = document.getElementById('reviewList');
+    const metrics = document.getElementById('metrics');
+    const positiveList = document.getElementById('positiveList');
+    const negativeList = document.getElementById('negativeList');
+    const neutralList = document.getElementById('neutralList');
+    const insights = document.getElementById('insights');
+    const resultEl = document.getElementById('classificationResult');
+
+    function renderReviewList() {
+      reviewList.innerHTML = '<h3>All Reviews</h3><ul>' + reviews.map((r, i) => `<li>${i + 1}. ${r}</li>`).join('') + '</ul>';
+    }
+
+    function classify(reviewText) {
+      const text = reviewText.toLowerCase();
+      const foundPositive = positiveKeywords.some(word => text.includes(word));
+      const foundNegative = negativeKeywords.some(word => text.includes(word));
+
+      if (foundPositive && !foundNegative) return 'Positive';
+      if (foundNegative) return 'Negative';
+      return 'Neutral';
+    }
+
+    function runAnalysis() {
+      const categorized = { Positive: [], Negative: [], Neutral: [] };
+
+      for (const review of reviews) {
+        categorized[classify(review)].push(review);
+      }
+
+      const total = reviews.length;
+      const posCount = categorized.Positive.length;
+      const negCount = categorized.Negative.length;
+      const neuCount = categorized.Neutral.length;
+
+      const posPercent = Math.round((posCount / total) * 100);
+      const negPercent = Math.round((negCount / total) * 100);
+      const neuPercent = Math.round((neuCount / total) * 100);
+
+      metrics.innerHTML = `
+        <div class="metric">
+          <div class="label">Total Reviews</div>
+          <div class="value">${total}</div>
+        </div>
+        <div class="metric pos">
+          <div class="label">Positive</div>
+          <div class="value">${posCount} (${posPercent}%)</div>
+        </div>
+        <div class="metric neg">
+          <div class="label">Negative</div>
+          <div class="value">${negCount} (${negPercent}%)</div>
+        </div>
+        <div class="metric neu">
+          <div class="label">Neutral</div>
+          <div class="value">${neuCount} (${neuPercent}%)</div>
+        </div>
+      `;
+
+      positiveList.innerHTML = categorized.Positive.length ? categorized.Positive.map(r => `<li>${r}</li>`).join('') : '<li>None found.</li>';
+      negativeList.innerHTML = categorized.Negative.length ? categorized.Negative.map(r => `<li>${r}</li>`).join('') : '<li>None found.</li>';
+      neutralList.innerHTML = categorized.Neutral.length ? categorized.Neutral.map(r => `<li>${r}</li>`).join('') : '<li>None found.</li>';
+
+      const sentiment = posCount > negCount ? 'Mostly Positive 😊' : (negCount > posCount ? 'Mostly Negative 😞' : 'Mixed 😐');
+
+      const complaints = new Set();
+      const likes = new Set();
+
+      for (const review of reviews) {
+        const lower = review.toLowerCase();
+        for (const [key, label] of Object.entries(complaintKeywords)) {
+          if (lower.includes(key)) complaints.add(label);
+        }
+        for (const [key, label] of Object.entries(likeKeywords)) {
+          if (lower.includes(key)) likes.add(label);
+        }
+      }
+
+      const recommendation = posPercent >= 60
+        ? 'Product is well-received. Keep up the quality!'
+        : (negPercent >= 60
+            ? 'Product needs improvement. Address complaints urgently.'
+            : 'Mixed feedback. Focus on resolving delivery and quality issues.');
+
+      insights.innerHTML = `
+        <p><strong>Insight 1 — Overall Customer Sentiment:</strong> ${sentiment}</p>
+        <p><strong>Insight 2 — Common Complaints:</strong></p>
+        <div>${[...complaints].map(c => `<span class="tag">${c}</span>`).join('') || '<span class="tag">No major complaints found.</span>'}</div>
+        <p style="margin-top:10px;"><strong>Insight 3 — What Customers Like Most:</strong></p>
+        <div>${[...likes].map(l => `<span class="tag">${l}</span>`).join('') || '<span class="tag">No specific likes identified.</span>'}</div>
+        <p style="margin-top:10px;"><strong>Insight 4 — Recommendation:</strong> ${recommendation}</p>
+      `;
+    }
+
+    document.getElementById('analyzeBtn').addEventListener('click', runAnalysis);
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      reviews = [...defaultReviews];
+      renderReviewList();
+      runAnalysis();
+      resultEl.textContent = 'Reset complete.';
+    });
+
+    document.getElementById('classifyBtn').addEventListener('click', () => {
+      const value = document.getElementById('userReview').value.trim();
+      if (!value) {
+        resultEl.textContent = 'Please enter a review first.';
+        return;
+      }
+      const label = classify(value);
+      resultEl.textContent = `Your review sentiment: ${label}`;
+      reviews.push(value);
+      renderReviewList();
+      runAnalysis();
+    });
+
+    renderReviewList();
+    runAnalysis();
+  </script>
+</body>
+</html>
