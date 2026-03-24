@@ -44,11 +44,120 @@ To make this project live on Vercel (Way 1):
 
 ---
 
-## Screenshots
+## Preview & Screenshots
 
-| View 1 | View 2 |
+### 🖥️ CLI Version Preview
+
+```
+===================================
+      Welcome to Simple ATM
+===================================
+
+Enter your PIN: 1234
+
+✅ Login successful! Welcome.
+
+-----------------------------------
+         ATM Main Menu
+-----------------------------------
+  1. Check Balance
+  2. Deposit Money
+  3. Withdraw Money
+  4. Exit
+-----------------------------------
+Enter your choice (1-4): 1
+
+💰 Your current balance is: ₹5000.00
+
+-----------------------------------
+         ATM Main Menu
+-----------------------------------
+  1. Check Balance
+  2. Deposit Money
+  3. Withdraw Money
+  4. Exit
+-----------------------------------
+Enter your choice (1-4): 2
+
+Enter amount to deposit: ₹1000
+✅ ₹1000.00 deposited successfully.
+   Updated Balance: ₹6000.00
+
+-----------------------------------
+         ATM Main Menu
+-----------------------------------
+  1. Check Balance
+  2. Deposit Money
+  3. Withdraw Money
+  4. Exit
+-----------------------------------
+Enter your choice (1-4): 3
+
+Enter amount to withdraw: ₹500
+✅ ₹500.00 withdrawn successfully.
+   Updated Balance: ₹5500.00
+
+-----------------------------------
+         ATM Main Menu
+-----------------------------------
+  1. Check Balance
+  2. Deposit Money
+  3. Withdraw Money
+  4. Exit
+-----------------------------------
+Enter your choice (1-4): 4
+
+👋 Thank you for using Simple ATM. Goodbye!
+```
+
+### 🌐 Website Version Preview
+
+**Realistic ATM Machine Interface**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                  ASH BANK ATM                           │
+│                  [● ONLINE]                            │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌──────────────────────────────────────────────────┐  │
+│  │                                                  │  │
+│  │  CARD DETECTED                                  │  │
+│  │  Enter PIN: ••••                                │  │
+│  │  Attempts remaining: 3                          │  │
+│  │                                                 │  │
+│  │  [SYSTEM] Welcome! Choose a transaction type.  │  │
+│  │  [SYSTEM] 1. Check Balance                      │  │
+│  │  [SYSTEM] 2. Deposit Money                      │  │
+│  │  [SYSTEM] 3. Withdraw Money                     │  │
+│  │  [SYSTEM] Exit                                  │  │
+│  │                                                 │  │
+│  └──────────────────────────────────────────────────┘  │
+│                                                         │
+│  Hardware Panel:                                        │
+│  [ 1 ][ 2 ][ 3 ][ 4 ]   ← Numeric Keypad             │
+│  [ 5 ][ 6 ][ 7 ][ 8 ]                                 │
+│  [ 9 ][ 0 ][ C ][ OK]                                 │
+│                                                         │
+│  [💳 CARD SLOT] [💵 CASH DISPENSER] [🧾 RECEIPT]    │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Features:**
+- Metallic frame with professional ATM styling
+- Interactive screen panel showing transaction details
+- Numeric keypad for PIN entry
+- System log output for all transactions
+- Hardware slot representations (card slot, cash dispenser, receipt printer)
+- Responsive design for mobile and desktop
+
+| Aspect | Details |
 |---|---|
-| ![Screenshot 1](screenshots/1.png) | ![Screenshot 2](screenshots/2.png) |
+| **Interface** | Realistic physical ATM machine aesthetic |
+| **Interactions** | Click buttons to perform transactions, system messages logged |
+| **Responsiveness** | Adapts to screen size while maintaining ATM appearance |
+| **Data Persistence** | Balance updates during session (demo mode) |
 
 ---
 

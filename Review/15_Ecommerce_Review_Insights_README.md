@@ -44,11 +44,128 @@ To make this project live on Vercel (Way 1):
 
 ---
 
-## Screenshots
+## Preview & Screenshots
 
-| View 1 | View 2 |
+### 🖥️ CLI Version Preview
+
+```
+============================================================
+        E-COMMERCE PRODUCT REVIEW ANALYSIS
+============================================================
+
+📋 ALL REVIEWS:
+------------------------------------------------------------
+  1. Great product, very useful and easy to use
+  2. The quality is good but delivery was late
+  3. Not satisfied, product stopped working after one week
+  4. Excellent quality and fast delivery
+  5. Average experience, nothing special
+
+📊 REVIEW COUNTS:
+------------------------------------------------------------
+  Total Reviews    : 5
+  Positive Reviews : 3  (60%)
+  Negative Reviews : 1  (20%)
+  Neutral Reviews  : 1  (20%)
+
+✅ POSITIVE REVIEWS:
+------------------------------------------------------------
+  + Great product, very useful and easy to use
+  + Excellent quality and fast delivery
+  + The quality is good but delivery was late
+
+❌ NEGATIVE REVIEWS:
+------------------------------------------------------------
+  - Not satisfied, product stopped working after one week
+
+😐 NEUTRAL REVIEWS:
+------------------------------------------------------------
+  ~ Average experience, nothing special
+
+============================================================
+        INSIGHTS
+============================================================
+
+  Insight 1 — Overall Customer Sentiment : Mostly Positive 😊
+
+  Insight 2 — Common Complaints:
+             * Late delivery
+             * Product stopped working
+             * Dissatisfied customers
+
+  Insight 3 — What Customers Like Most:
+             * Product quality
+             * Fast delivery
+             * Usefulness of product
+             * Ease of use
+             * Excellent experience
+```
+
+### 🌐 Website Version Preview
+
+**Interactive Analytics Dashboard**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│          📊 E-Commerce Review Sentiment Analysis        │
+└──────────────────────────────────────────────────────────┘
+
+┌─────────────────────┬─────────────────────┬────────────┐
+│ Positive Reviews    │ Negative Reviews    │ Neutral    │
+│ 3                   │ 1                   │ 1          │
+│ 60%                 │ 20%                 │ 20%        │
+└─────────────────────┴─────────────────────┴────────────┘
+
+┌──────────────────────────────────────────────────────────┐
+│               📈 KEY INSIGHTS                            │
+├──────────────────────────────────────────────────────────┤
+│ Overall Sentiment: Mostly Positive 😊                    │
+│ Common Complaints: Late delivery, Product issues         │
+│ Customer Likes: Quality, Fast delivery, Usefulness       │
+│ Recommendation: Improve delivery time, quality control   │
+└──────────────────────────────────────────────────────────┘
+
+┌────────────────────────────┬────────────────────────────┐
+│ ✅ POSITIVE REVIEWS        │ ❌ NEGATIVE REVIEWS       │
+├────────────────────────────┼────────────────────────────┤
+│ • Great product, very      │ • Not satisfied, product  │
+│   useful and easy to use   │   stopped working after... │
+│ • Excellent quality and    │                            │
+│   fast delivery            │                            │
+│ • The quality is good      │                            │
+│   but delivery was late    │                            │
+└────────────────────────────┴────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────┐
+│ 😐 NEUTRAL REVIEWS                                       │
+├──────────────────────────────────────────────────────────┤
+│ • Average experience, nothing special                    │
+└──────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────┐
+│              📝 CLASSIFY YOUR OWN REVIEW                 │
+├──────────────────────────────────────────────────────────┤
+│ [Enter your review text here...                    ]     │
+│ [CLASSIFY REVIEW]                                        │
+│ Result: [Positive/Negative/Neutral]                     │
+└──────────────────────────────────────────────────────────┘
+```
+
+**Features:**
+- Professional metrics dashboard with sentiment cards
+- Real-time sentiment classification using keyword matching
+- Categorized review lists (positive, negative, neutral)
+- Business insights panel with actionable recommendations
+- Interactive user review classifier
+- Color-coded sentiment indicators (green/red/gray)
+- Responsive grid layout for all screen sizes
+
+| Aspect | Details |
 |---|---|
-| ![Screenshot 1](screenshots/1.png) | ![Screenshot 2](screenshots/2.png) |
+| **Dashboard** | Professional metrics cards displaying sentiment distribution |
+| **Interactions** | Input custom review and see instant sentiment classification |
+| **Responsiveness** | Mobile-friendly grid layout |
+| **Analysis** | Real-time keyword matching matching CLI version logic |
 
 ---
 
