@@ -43,7 +43,7 @@ This project's website-style version is deployed live on Vercel!
 
 ### � Website Version (Live Demo)
 
-![ATM Website Interface](ATM.jpg)
+![ATM Website Interface](ATM.jpeg)
 
 *Above: Interactive ATM machine interface on Vercel — [Try it live](https://01-atm.vercel.app/)*
 
@@ -254,3 +254,4 @@ while True:
 
 ---
 *Built during LetsUpgrade Bootcamp — 10 February 2026*
+

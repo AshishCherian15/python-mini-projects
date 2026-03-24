@@ -43,7 +43,7 @@ This project's website-style version is deployed live on Vercel!
 
 ### � Website Version (Live Demo)
 
-![Review Analytics Dashboard](REVIEW.jpg)
+![Review Analytics Dashboard](REVIEW.jpeg)
 
 *Above: Interactive sentiment analysis dashboard on Vercel — [Try it live](https://02-review.vercel.app/)*
 
@@ -256,3 +256,4 @@ pos_percent = round((len(positive_reviews)/len(reviews))*100)
 
 ---
 *Built during LetsUpgrade Bootcamp — 22 January 2026*
+
