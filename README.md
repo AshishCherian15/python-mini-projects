@@ -48,9 +48,11 @@ PIN-based login (3 attempts), check balance, deposit, withdraw, and exit flow wi
 - Python 3 (CLI)
 - HTML/CSS/JavaScript (website-style UI enhancement)
 
-**Screenshot:** Not specified
+![ATM Website Interface](ATM/ATM.jpg)
 
-**Live Link:** Not specified
+**Live Link:** [🔗 https://01-atm.vercel.app/](https://01-atm.vercel.app/)
+
+[📖 View ATM Project Details](ATM/14_Python_ATM_Simulation_README.md)
 
 ### 🛍️ Project 2: E-commerce Review Insights
 
@@ -72,18 +74,18 @@ Analyzes product reviews, classifies positive/negative/neutral sentiment, comput
 - Python 3 (CLI)
 - HTML/CSS/JavaScript (website-style UI enhancement)
 
-**Screenshot:** Not specified
+![Review Analytics Dashboard](Review/REVIEW.jpg)
 
-**Live Link:** Not specified
+**Live Link:** [🔗 https://02-review.vercel.app/](https://02-review.vercel.app/)
 
-## 🌐 Live Deployments
+[📖 View Review Project Details](Review/15_Ecommerce_Review_Insights_README.md)
 
-Deploy each project independently from the same repository by setting project-specific root directories in Vercel.
+Both projects are now live on Vercel! Each deploys independently from the same repository using project-specific root directories.
 
 | Project | Vercel Root Directory | Live URL | Status |
 |---|---|---|---|
-| ATM Website-style | `ATM/` | Not specified | Ready to deploy |
-| Review Insights Website-style | `Review/` | Not specified | Ready to deploy |
+| ATM Website-style | `ATM/` | **[https://01-atm.vercel.app/](https://01-atm.vercel.app/)** | ✅ Live |
+| Review Insights Website-style | `Review/` | **[https://02-review.vercel.app/](https://02-review.vercel.app/)** | ✅ Live |
 
 ## 🛠️ Local Development
 

@@ -8,7 +8,7 @@ A Python program that analyses e-commerce product reviews using keyword matching
 
 ## Live Demo
 
-[Add your live demo link here — deploy on Vercel or GitHub Pages]
+🌐 **[View Live: https://02-review.vercel.app/](https://02-review.vercel.app/)**
 
 **Note:** This project now has two versions:
 - CLI version (`review_insights.py`) — original bootcamp assignment implementation
@@ -16,24 +16,19 @@ A Python program that analyses e-commerce product reviews using keyword matching
 
 ---
 
-## Vercel Deployment Note (Way 1)
+## Vercel Deployment
 
-This project is currently a **CLI Python app**. Vercel cannot run interactive terminal sessions directly.
+This project's website-style version is deployed live on Vercel!
 
-To make this project live on Vercel (Way 1):
-- Build a frontend version (for example with React/Next.js) that replicates the review analysis flow.
-- Move logic from terminal `input()`/`print()` interaction into browser input fields and result cards.
-- Keep this Python script as reference for original assignment logic.
-
-### Planned Vercel Setup
+### Deployment Details
 
 | Field | Value |
 |---|---|
-| GitHub repository | `https://github.com/AshishCherian15/react-mini-projcets` |
+| GitHub repository | `https://github.com/AshishCherian15/python-mini-projects` |
 | Deployment model | One Vercel project per mini-project folder |
 | Root directory | `Review/` (web version folder) |
-| Live URL | Not specified |
-| Status | Website-style version completed, ready to deploy |
+| Live URL | **[https://02-review.vercel.app/](https://02-review.vercel.app/)** |
+| Status | ✅ Live & Active |
 
 ### Update Log
 
@@ -46,7 +41,15 @@ To make this project live on Vercel (Way 1):
 
 ## Preview & Screenshots
 
-### 🖥️ CLI Version Preview
+### � Website Version (Live Demo)
+
+![Review Analytics Dashboard](REVIEW.jpg)
+
+*Above: Interactive sentiment analysis dashboard on Vercel — [Try it live](https://02-review.vercel.app/)*
+
+---
+
+### �🖥️ CLI Version Preview
 
 ```
 ============================================================
